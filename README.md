@@ -629,8 +629,9 @@ We welcome contributions! Here's how to get started:
 
 ```bash
 # Fork and clone
-git clone https://github.com/yourusername/gridworld-rl.git
-cd gridworld-rl
+git clone https://github.com/AM1N8/Reinforcement-Learning-GridWorld-Lab.git
+cd Reinforcement-Learning-GridWorld-Lab
+
 
 # Create feature branch
 git checkout -b feature/my-new-feature
