@@ -670,7 +670,7 @@ git push origin feature/my-new-feature
 - [ ] Performance optimizations
 
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Inspired by Sutton & Barto's "Reinforcement Learning: An Introduction"
 - Built with PyTorch and Gymnasium
