@@ -6,4 +6,4 @@
 
 - main.py has functions to run ( VI PI MC and Qlearning ) and compare the algorithms 
 - algorithms.py has all the classes for algorithms ( GPI MC QLearning)
-- it would have been better to use arg parsers in main.py but i couldn't figure out how to do it 
+- it would have been better to use arg parsers in main.py but didn't have enough time 
