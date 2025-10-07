@@ -441,7 +441,7 @@ The framework generates various outputs in the `visualizations/` directory:
     "gamma": 0.99,
     "epsilon_start": 1.0
   },
-  "episode_rewards": [/* list of rewards ],
+  "episode_rewards": [/* list of rewards */],
   "episode_steps": [/* list of steps */],
   "epsilon_history": [/* epsilon over time */],
   "loss_history": [/* training losses */],
@@ -632,6 +632,7 @@ We welcome contributions! Here's how to get started:
 git clone https://github.com/AM1N8/Reinforcement-Learning-GridWorld-Lab.git
 cd Reinforcement-Learning-GridWorld-Lab
 
+
 # Create feature branch
 git checkout -b feature/my-new-feature
 
@@ -670,7 +671,7 @@ git push origin feature/my-new-feature
 - [ ] Performance optimizations
 
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Inspired by Sutton & Barto's "Reinforcement Learning: An Introduction"
 - Built with PyTorch and Gymnasium
