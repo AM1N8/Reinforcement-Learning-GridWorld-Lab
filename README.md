@@ -16,7 +16,9 @@ A comprehensive Python framework for learning and experimenting with reinforceme
 - **Comprehensive Logging**: Track and analyze training metrics
 
 ![DQL Learning Animation](visualizations/dql_learning_process.gif)
-
+![DQN Learning Animation](visualizations/dql_training_summary.png)
+![DQN Learning Animation](visualizations/q-learning_trajectory.gif)
+![DQN Learning Animation](visualizations/ql_q_values.png)
 
 ##  Table of Contents
 
