@@ -1,0 +1,636 @@
+<!DOCTYPE html><html><head>
+      <title>manual</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\amine\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="gridworld-reinforcement-learning-framework---user-manual">GridWorld Reinforcement Learning Framework - User Manual </h1>
+<h2 id="table-of-contents">Table of Contents </h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#quick-start">Quick Start</a></li>
+<li><a href="#framework-architecture">Framework Architecture</a></li>
+<li><a href="#algorithms-overview">Algorithms Overview</a></li>
+<li><a href="#complete-usage-guide">Complete Usage Guide</a></li>
+<li><a href="#command-line-arguments">Command-Line Arguments</a></li>
+<li><a href="#use-cases--examples">Use Cases &amp; Examples</a></li>
+<li><a href="#cheat-sheet">Cheat Sheet</a></li>
+<li><a href="#understanding-the-output">Understanding the Output</a></li>
+<li><a href="#advanced-features">Advanced Features</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+<hr>
+<h2 id="introduction">Introduction </h2>
+<p>The GridWorld Reinforcement Learning Framework is a comprehensive toolkit for learning, experimenting with, and visualizing reinforcement learning algorithms. It provides implementations of both classical and modern RL algorithms in a simple grid environment.</p>
+<h3 id="key-features">Key Features </h3>
+<ul>
+<li>🎯 6 RL algorithms implemented (VI, PI, MC, Q-Learning, SARSA(λ), DQN)</li>
+<li>📊 Rich visualization capabilities</li>
+<li>🎬 Animated learning processes</li>
+<li>💾 Model saving/loading</li>
+<li>🔬 Built-in experiments</li>
+<li>📈 Comprehensive metrics tracking</li>
+</ul>
+<hr>
+<h2 id="quick-start">Quick Start </h2>
+<h3 id="basic-commands">Basic Commands </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Run Q-Learning (default)</span>
+uv run src/main.py
+
+<span class="token comment"># Run with animation</span>
+uv run src/main.py <span class="token parameter variable">--animate</span>
+
+<span class="token comment"># Run Value Iteration on 10x10 grid</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> <span class="token function">vi</span> <span class="token parameter variable">--rows</span> <span class="token number">10</span> <span class="token parameter variable">--cols</span> <span class="token number">10</span>
+
+<span class="token comment"># Compare all algorithms</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> compare
+</code></pre><hr>
+<h2 id="framework-architecture">Framework Architecture </h2>
+<h3 id="component-overview">Component Overview </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>┌─────────────────────────────────────────┐
+│          GridWorld Framework            │
+├─────────────────────────────────────────┤
+│  model.py        │ Environment model    │
+│  environment.py  │ Gym-style interface  │
+│  agent.py        │ Agent wrapper        │
+│  algorithms.py   │ Classical RL algos   │
+│  dqn.py          │ Deep Q-Network       │
+│  visualizer.py   │ Plotting &amp; animation │
+│  main.py         │ CLI interface        │
+└─────────────────────────────────────────┘
+</code></pre><h3 id="how-it-works">How It Works </h3>
+<ol>
+<li><strong>Model</strong> (<code>model.py</code>): Defines the grid world structure, rewards, and transitions</li>
+<li><strong>Environment</strong> (<code>environment.py</code>): OpenAI Gym-compatible environment for training</li>
+<li><strong>Algorithms</strong>: Learn optimal policies through different strategies</li>
+<li><strong>Agent</strong> (<code>agent.py</code>): Executes learned policies</li>
+<li><strong>Visualizer</strong> (<code>visualizer.py</code>): Creates plots and animations</li>
+</ol>
+<hr>
+<h2 id="algorithms-overview">Algorithms Overview </h2>
+<h3 id="1-value-iteration-vi">1. Value Iteration (VI) </h3>
+<p><strong>Type</strong>: Dynamic Programming<br>
+<strong>Best for</strong>: Small grids, exact solutions<br>
+<strong>How it works</strong>: Iteratively updates state values until convergence</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>uv run src/main.py <span class="token parameter variable">--algorithm</span> <span class="token function">vi</span> <span class="token parameter variable">--gamma</span> <span class="token number">0.99</span>
+</code></pre><p><strong>Pros</strong>: Guaranteed optimal policy, fast on small grids<br>
+<strong>Cons</strong>: Requires model knowledge, scales poorly</p>
+<hr>
+<h3 id="2-policy-iteration-pi">2. Policy Iteration (PI) </h3>
+<p><strong>Type</strong>: Dynamic Programming<br>
+<strong>Best for</strong>: Small grids, few actions<br>
+<strong>How it works</strong>: Alternates between policy evaluation and improvement</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>uv run src/main.py <span class="token parameter variable">--algorithm</span> pi <span class="token parameter variable">--gamma</span> <span class="token number">0.99</span>
+</code></pre><p><strong>Pros</strong>: Often faster than VI, guaranteed optimal<br>
+<strong>Cons</strong>: Requires model knowledge, scales poorly</p>
+<hr>
+<h3 id="3-monte-carlo-mc">3. Monte Carlo (MC) </h3>
+<p><strong>Type</strong>: Model-free, Episode-based<br>
+<strong>Best for</strong>: Episodic tasks, simple exploration<br>
+<strong>How it works</strong>: Learns from complete episode returns</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>uv run src/main.py <span class="token parameter variable">--algorithm</span> <span class="token function">mc</span> <span class="token parameter variable">--episodes</span> <span class="token number">1000</span> <span class="token parameter variable">--epsilon</span> <span class="token number">0.1</span>
+</code></pre><p><strong>Pros</strong>: Model-free, simple, unbiased estimates<br>
+<strong>Cons</strong>: High variance, requires episode completion</p>
+<hr>
+<h3 id="4-q-learning-ql">4. Q-Learning (QL) </h3>
+<p><strong>Type</strong>: Model-free, Off-policy TD<br>
+<strong>Best for</strong>: General purpose learning<br>
+<strong>How it works</strong>: Updates Q-values using max over next actions</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token parameter variable">--alpha</span> <span class="token number">0.1</span> <span class="token parameter variable">--gamma</span> <span class="token number">0.99</span> <span class="token parameter variable">--epsilon</span> <span class="token number">0.1</span>
+</code></pre><p><strong>Pros</strong>: Off-policy, online learning, proven convergence<br>
+<strong>Cons</strong>: Overestimation bias, tabular only</p>
+<hr>
+<h3 id="5-sarsaλ-sl">5. SARSA(λ) (SL) </h3>
+<p><strong>Type</strong>: Model-free, On-policy TD(λ)<br>
+<strong>Best for</strong>: Safe exploration, eligibility traces<br>
+<strong>How it works</strong>: On-policy TD with eligibility traces</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>uv run src/main.py <span class="token parameter variable">--algorithm</span> sl <span class="token parameter variable">--alpha</span> <span class="token number">0.1</span> --lambda-val <span class="token number">0.9</span>
+</code></pre><p><strong>Pros</strong>: On-policy (safer), multi-step credit assignment<br>
+<strong>Cons</strong>: Slower convergence than Q-learning</p>
+<hr>
+<h3 id="6-deep-q-network-dqn">6. Deep Q-Network (DQN) </h3>
+<p><strong>Type</strong>: Deep RL, Off-policy<br>
+<strong>Best for</strong>: Large state spaces, function approximation<br>
+<strong>How it works</strong>: Neural network approximates Q-function</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>uv run src/main.py <span class="token parameter variable">--algorithm</span> dql <span class="token parameter variable">--episodes</span> <span class="token number">500</span> --dqn-hidden <span class="token number">128</span> <span class="token number">128</span>
+</code></pre><p><strong>Pros</strong>: Scales to large spaces, function approximation<br>
+<strong>Cons</strong>: Sample inefficient, hyperparameter sensitive</p>
+<hr>
+<h2 id="complete-usage-guide">Complete Usage Guide </h2>
+<h3 id="grid-configuration">Grid Configuration </h3>
+<h4 id="basic-grid-setup">Basic Grid Setup </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># 5x5 grid (default)</span>
+uv run src/main.py <span class="token parameter variable">--rows</span> <span class="token number">5</span> <span class="token parameter variable">--cols</span> <span class="token number">5</span>
+
+<span class="token comment"># 10x10 grid</span>
+uv run src/main.py <span class="token parameter variable">--rows</span> <span class="token number">10</span> <span class="token parameter variable">--cols</span> <span class="token number">10</span>
+</code></pre><h4 id="setting-start-and-goal-states">Setting Start and Goal States </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Start at (0,0), goal at (4,4)</span>
+uv run src/main.py <span class="token parameter variable">--starts</span> <span class="token number">0,0</span> <span class="token parameter variable">--goals</span> <span class="token number">4,4</span>
+
+<span class="token comment"># Multiple starts</span>
+uv run src/main.py <span class="token parameter variable">--starts</span> <span class="token number">0,0</span> <span class="token number">0,4</span> <span class="token parameter variable">--goals</span> <span class="token number">4,4</span>
+
+<span class="token comment"># Multiple goals</span>
+uv run src/main.py <span class="token parameter variable">--starts</span> <span class="token number">0,0</span> <span class="token parameter variable">--goals</span> <span class="token number">4,4</span> <span class="token number">4,0</span>
+</code></pre><h4 id="adding-obstacles">Adding Obstacles </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Single obstacle</span>
+uv run src/main.py <span class="token parameter variable">--obstacles</span> <span class="token number">2,2</span>
+
+<span class="token comment"># Multiple obstacles (create a maze)</span>
+uv run src/main.py <span class="token parameter variable">--obstacles</span> <span class="token number">1,1</span> <span class="token number">1,2</span> <span class="token number">1,3</span> <span class="token number">3,1</span> <span class="token number">3,2</span> <span class="token number">3,3</span>
+</code></pre><h4 id="reward-customization">Reward Customization </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Custom rewards</span>
+uv run src/main.py --goal-reward <span class="token number">100</span> --step-penalty <span class="token parameter variable">-0.1</span> --obstacle-penalty <span class="token parameter variable">-10</span>
+
+<span class="token comment"># Sparse rewards (discourage wandering)</span>
+uv run src/main.py --goal-reward <span class="token number">10</span> --step-penalty <span class="token parameter variable">-1</span>
+
+<span class="token comment"># Dense rewards (encourage exploration)</span>
+uv run src/main.py --goal-reward <span class="token number">10</span> --step-penalty <span class="token parameter variable">-0.01</span>
+</code></pre><hr>
+<h3 id="algorithm-specific-parameters">Algorithm-Specific Parameters </h3>
+<h4 id="valuepolicy-iteration">Value/Policy Iteration </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Standard discount factor</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> <span class="token function">vi</span> <span class="token parameter variable">--gamma</span> <span class="token number">0.99</span>
+
+<span class="token comment"># Higher discount (more forward-looking)</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> pi <span class="token parameter variable">--gamma</span> <span class="token number">0.999</span>
+</code></pre><h4 id="q-learning">Q-Learning </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Standard hyperparameters</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token punctuation">\</span>
+  <span class="token parameter variable">--alpha</span> <span class="token number">0.1</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--gamma</span> <span class="token number">0.99</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--epsilon</span> <span class="token number">0.1</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">500</span>
+
+<span class="token comment"># Fast learning</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token parameter variable">--alpha</span> <span class="token number">0.3</span> <span class="token parameter variable">--epsilon</span> <span class="token number">0.2</span>
+
+<span class="token comment"># Conservative learning</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token parameter variable">--alpha</span> <span class="token number">0.01</span> <span class="token parameter variable">--epsilon</span> <span class="token number">0.05</span>
+</code></pre><h4 id="sarsaλ">SARSA(λ) </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># High eligibility traces</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> sl --lambda-val <span class="token number">0.9</span>
+
+<span class="token comment"># Low eligibility traces (closer to SARSA(0))</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> sl --lambda-val <span class="token number">0.3</span>
+</code></pre><h4 id="dqn">DQN </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Standard DQN</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql <span class="token punctuation">\</span>
+  --dqn-hidden <span class="token number">128</span> <span class="token number">128</span> <span class="token punctuation">\</span>
+  --dqn-buffer-size <span class="token number">10000</span> <span class="token punctuation">\</span>
+  --dqn-batch-size <span class="token number">64</span> <span class="token punctuation">\</span>
+  --dqn-target-update <span class="token number">10</span>
+
+<span class="token comment"># Deeper network</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --dqn-hidden <span class="token number">256</span> <span class="token number">256</span> <span class="token number">128</span>
+
+<span class="token comment"># Larger replay buffer</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --dqn-buffer-size <span class="token number">50000</span>
+</code></pre><hr>
+<h3 id="visualization-options">Visualization Options </h3>
+<h4 id="basic-visualization">Basic Visualization </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Default: shows all plots</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql
+
+<span class="token comment"># Disable visualization</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql --no-viz
+</code></pre><h4 id="animated-episodes">Animated Episodes </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Animate final episode</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token parameter variable">--animate</span>
+
+<span class="token comment"># Save animation as GIF</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token parameter variable">--animate</span> --save-animation
+
+<span class="token comment"># Animate entire learning process</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --animate-learning --save-animation
+</code></pre><h4 id="saving-visualizations">Saving Visualizations </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Save to default directory (../visualizations)</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql
+
+<span class="token comment"># Custom save directory</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql --save-dir ./my_results
+</code></pre><hr>
+<h3 id="model-management">Model Management </h3>
+<h4 id="saving-models">Saving Models </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Save DQN model</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --save-model
+
+<span class="token comment"># Save with logs</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --save-model --save-logs
+</code></pre><h4 id="loading-models">Loading Models </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Load pre-trained model</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --load-model <span class="token punctuation">..</span>/visualizations/dqn_model_20241006_123456.pth
+
+<span class="token comment"># Load and test</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --load-model path/to/model.pth <span class="token parameter variable">--animate</span>
+</code></pre><h4 id="loading-and-visualizing-logs">Loading and Visualizing Logs </h4>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Visualize training logs</span>
+uv run src/main.py --load-logs <span class="token punctuation">..</span>/visualizations/dqn_log_20241006_123456.json
+</code></pre><hr>
+<h2 id="use-cases--examples">Use Cases &amp; Examples </h2>
+<h3 id="use-case-1-learning-basics">Use Case 1: Learning Basics </h3>
+<p><strong>Goal</strong>: Understand how Q-Learning works</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Small grid, verbose output</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token punctuation">\</span>
+  <span class="token parameter variable">--rows</span> <span class="token number">3</span> <span class="token parameter variable">--cols</span> <span class="token number">3</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">100</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--verbose</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--animate</span>
+</code></pre><p><strong>What to observe</strong>:</p>
+<ul>
+<li>Q-values converging</li>
+<li>Policy becoming deterministic</li>
+<li>Rewards increasing over time</li>
+</ul>
+<hr>
+<h3 id="use-case-2-maze-navigation">Use Case 2: Maze Navigation </h3>
+<p><strong>Goal</strong>: Solve a complex maze</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Create a maze with obstacles</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token punctuation">\</span>
+  <span class="token parameter variable">--rows</span> <span class="token number">7</span> <span class="token parameter variable">--cols</span> <span class="token number">7</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--obstacles</span> <span class="token number">1,1</span> <span class="token number">1,2</span> <span class="token number">1,3</span> <span class="token number">3,1</span> <span class="token number">3,3</span> <span class="token number">3,5</span> <span class="token number">5,3</span> <span class="token number">5,4</span> <span class="token number">5,5</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--starts</span> <span class="token number">0,0</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--goals</span> <span class="token number">6,6</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">1000</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--animate</span>
+</code></pre><p><strong>Tips</strong>:</p>
+<ul>
+<li>Increase episodes for complex mazes</li>
+<li>Lower step penalty to encourage exploration</li>
+<li>Use --animate to visualize the solution</li>
+</ul>
+<hr>
+<h3 id="use-case-3-comparing-algorithms">Use Case 3: Comparing Algorithms </h3>
+<p><strong>Goal</strong>: Find the best algorithm for your problem</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Compare all algorithms</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> compare <span class="token punctuation">\</span>
+  <span class="token parameter variable">--rows</span> <span class="token number">5</span> <span class="token parameter variable">--cols</span> <span class="token number">5</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">500</span>
+</code></pre><p><strong>Analysis</strong>:</p>
+<ul>
+<li>VI/PI: Fastest on small grids</li>
+<li>Q-Learning: Best general-purpose</li>
+<li>DQN: Best for scaling up</li>
+</ul>
+<hr>
+<h3 id="use-case-4-grid-size-experiment">Use Case 4: Grid Size Experiment </h3>
+<p><strong>Goal</strong>: Understand how algorithms scale</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Test multiple grid sizes</span>
+uv run src/main.py --grid-size-experiment <span class="token punctuation">\</span>
+  --grid-sizes 3x3 5x5 7x7 10x10 15x15 <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">500</span> <span class="token punctuation">\</span>
+  --save-logs
+</code></pre><p><strong>Insights</strong>:</p>
+<ul>
+<li>Training time vs grid size</li>
+<li>Convergence speed</li>
+<li>Sample efficiency</li>
+</ul>
+<hr>
+<h3 id="use-case-5-fine-tuning-dqn">Use Case 5: Fine-tuning DQN </h3>
+<p><strong>Goal</strong>: Optimize DQN performance</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Optimized DQN configuration</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql <span class="token punctuation">\</span>
+  <span class="token parameter variable">--rows</span> <span class="token number">10</span> <span class="token parameter variable">--cols</span> <span class="token number">10</span> <span class="token punctuation">\</span>
+  --dqn-hidden <span class="token number">256</span> <span class="token number">128</span> <span class="token number">64</span> <span class="token punctuation">\</span>
+  --dqn-buffer-size <span class="token number">20000</span> <span class="token punctuation">\</span>
+  --dqn-batch-size <span class="token number">128</span> <span class="token punctuation">\</span>
+  --dqn-target-update <span class="token number">5</span> <span class="token punctuation">\</span>
+  --epsilon-decay <span class="token number">0.995</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">1000</span> <span class="token punctuation">\</span>
+  --save-model --save-logs <span class="token punctuation">\</span>
+  --animate-learning
+</code></pre><hr>
+<h3 id="use-case-6-custom-reward-shaping">Use Case 6: Custom Reward Shaping </h3>
+<p><strong>Goal</strong>: Design rewards for specific behavior</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Encourage fast solutions</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token punctuation">\</span>
+  --goal-reward <span class="token number">100</span> <span class="token punctuation">\</span>
+  --step-penalty <span class="token parameter variable">-2</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">500</span>
+
+<span class="token comment"># Encourage exploration (minimize steps)</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token punctuation">\</span>
+  --goal-reward <span class="token number">10</span> <span class="token punctuation">\</span>
+  --step-penalty <span class="token parameter variable">-0.1</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--episodes</span> <span class="token number">500</span>
+</code></pre><hr>
+<h2 id="cheat-sheet">Cheat Sheet </h2>
+<h3 id="quick-reference-commands">Quick Reference Commands </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Basic training</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> <span class="token punctuation">[</span>vi<span class="token operator">|</span>pi<span class="token operator">|</span><span class="token function">mc</span><span class="token operator">|</span>ql<span class="token operator">|</span>sl<span class="token operator">|</span>dql<span class="token punctuation">]</span>
+
+<span class="token comment"># Common flags</span>
+<span class="token parameter variable">--rows</span> N <span class="token parameter variable">--cols</span> N              <span class="token comment"># Grid size</span>
+<span class="token parameter variable">--starts</span> r,c                   <span class="token comment"># Start position</span>
+<span class="token parameter variable">--goals</span> r,c                    <span class="token comment"># Goal position</span>
+<span class="token parameter variable">--obstacles</span> r,c r,c <span class="token punctuation">..</span>.        <span class="token comment"># Obstacle positions</span>
+<span class="token parameter variable">--episodes</span> N                   <span class="token comment"># Training episodes</span>
+<span class="token parameter variable">--animate</span>                      <span class="token comment"># Show animation</span>
+--save-animation               <span class="token comment"># Save as GIF</span>
+--no-viz                       <span class="token comment"># No plots</span>
+<span class="token parameter variable">--verbose</span>                      <span class="token comment"># Detailed output</span>
+--save-model                   <span class="token comment"># Save trained model</span>
+--load-model path              <span class="token comment"># Load model</span>
+</code></pre><h3 id="hyperparameter-recommendations">Hyperparameter Recommendations </h3>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Alpha</th>
+<th>Gamma</th>
+<th>Epsilon</th>
+<th>Episodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VI/PI</td>
+<td>N/A</td>
+<td>0.99</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>MC</td>
+<td>N/A</td>
+<td>0.99</td>
+<td>0.1</td>
+<td>1000+</td>
+</tr>
+<tr>
+<td>Q-Learning</td>
+<td>0.1</td>
+<td>0.99</td>
+<td>0.1</td>
+<td>500</td>
+</tr>
+<tr>
+<td>SARSA(λ)</td>
+<td>0.1</td>
+<td>0.99</td>
+<td>0.1</td>
+<td>500</td>
+</tr>
+<tr>
+<td>DQN</td>
+<td>0.001</td>
+<td>0.99</td>
+<td>1.0→0.01</td>
+<td>500+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-outputs">File Outputs </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>visualizations/
+├── *_q_values.png           # Q-value heatmaps
+├── *_policy.png             # Policy arrows
+├── *_trajectory.png         # Agent path
+├── *_learning_curve.png     # Training progress
+├── *_epsilon_decay.png      # Exploration schedule
+├── *_training_summary.png   # Multi-panel summary
+├── *.gif                    # Animations
+└── *.json                   # Training logs
+</code></pre><hr>
+<h2 id="understanding-the-output">Understanding the Output </h2>
+<h3 id="console-output">Console Output </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>============================================================
+GridWorld: Reinforcement Learning Framework
+============================================================
+
+GridWorld(5x5)
+  Start: [(0, 0)]
+  Goals: [(4, 4)]
+  Actions: 4 (↑, →, ↓, ←)
+
+============================================================
+Q-Learning
+============================================================
+
+Training Q-Learning...
+Episode 100/500, Avg Reward: -12.4
+Episode 200/500, Avg Reward: -8.1
+Episode 500/500, Avg Reward: 5.2
+
+Q-Learning Results:
+Steps: 8, Total Reward: 2.0
+</code></pre><p><strong>Interpreting</strong>:</p>
+<ul>
+<li><strong>Avg Reward increasing</strong>: Learning is progressing</li>
+<li><strong>Steps decreasing</strong>: Finding shorter paths</li>
+<li><strong>Total Reward</strong>: Final episode performance</li>
+</ul>
+<hr>
+<h3 id="visualizations">Visualizations </h3>
+<h4 id="1-q-values-plot">1. Q-Values Plot </h4>
+<p>Shows learned value for each state-action pair</p>
+<ul>
+<li><strong>Brighter colors</strong>: Higher Q-values (better actions)</li>
+<li><strong>Darker colors</strong>: Lower Q-values (worse actions)</li>
+</ul>
+<h4 id="2-policy-plot">2. Policy Plot </h4>
+<p>Shows the best action in each state</p>
+<ul>
+<li><strong>Arrows</strong>: Indicate optimal action direction</li>
+<li><strong>Color</strong>: State value (brighter = better)</li>
+</ul>
+<h4 id="3-trajectory-plot">3. Trajectory Plot </h4>
+<p>Shows agent's path through the grid</p>
+<ul>
+<li><strong>Green square</strong>: Start state</li>
+<li><strong>Red square</strong>: Goal state</li>
+<li><strong>Yellow dots</strong>: Agent's path</li>
+<li><strong>Gray squares</strong>: Obstacles</li>
+</ul>
+<h4 id="4-learning-curve">4. Learning Curve </h4>
+<p>Shows training progress</p>
+<ul>
+<li><strong>X-axis</strong>: Episode number</li>
+<li><strong>Y-axis</strong>: Total reward</li>
+<li><strong>Upward trend</strong>: Successful learning</li>
+<li><strong>Plateau</strong>: Convergence</li>
+</ul>
+<hr>
+<h2 id="advanced-features">Advanced Features </h2>
+<h3 id="custom-grid-configurations">Custom Grid Configurations </h3>
+<p>Create complex environments by combining arguments:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Four-room environment</span>
+uv run src/main.py <span class="token punctuation">\</span>
+  <span class="token parameter variable">--rows</span> <span class="token number">11</span> <span class="token parameter variable">--cols</span> <span class="token number">11</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--obstacles</span> <span class="token punctuation">\</span>
+    <span class="token number">5,0</span> <span class="token number">5,1</span> <span class="token number">5,2</span> <span class="token number">5,3</span> <span class="token number">5,4</span> <span class="token number">5,6</span> <span class="token number">5,7</span> <span class="token number">5,8</span> <span class="token number">5,9</span> <span class="token number">5,10</span> <span class="token punctuation">\</span>
+    <span class="token number">0,5</span> <span class="token number">1,5</span> <span class="token number">2,5</span> <span class="token number">3,5</span> <span class="token number">4,5</span> <span class="token number">6,5</span> <span class="token number">7,5</span> <span class="token number">8,5</span> <span class="token number">9,5</span> <span class="token number">10,5</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--starts</span> <span class="token number">1,1</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--goals</span> <span class="token number">9,9</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">--algorithm</span> ql <span class="token parameter variable">--episodes</span> <span class="token number">1000</span>
+</code></pre><h3 id="reproducibility">Reproducibility </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Set random seed for reproducible results</span>
+uv run src/main.py <span class="token parameter variable">--seed</span> <span class="token number">42</span> <span class="token parameter variable">--algorithm</span> ql
+</code></pre><h3 id="batch-experiments">Batch Experiments </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Compare different learning rates</span>
+<span class="token keyword keyword-for">for</span> <span class="token for-or-select variable">alpha</span> <span class="token keyword keyword-in">in</span> <span class="token number">0.01</span> <span class="token number">0.05</span> <span class="token number">0.1</span> <span class="token number">0.2</span><span class="token punctuation">;</span> <span class="token keyword keyword-do">do</span>
+  uv run src/main.py <span class="token parameter variable">--algorithm</span> ql <span class="token parameter variable">--alpha</span> <span class="token variable">$alpha</span> --save-logs
+<span class="token keyword keyword-done">done</span>
+</code></pre><h3 id="analyzing-saved-logs">Analyzing Saved Logs </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> json
+<span class="token keyword keyword-import">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword keyword-as">as</span> plt
+
+<span class="token comment"># Load training log</span>
+<span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'visualizations/dqn_log_20241006_123456.json'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> f<span class="token punctuation">:</span>
+    log <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+
+<span class="token comment"># Plot episode rewards</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>log<span class="token punctuation">[</span><span class="token string">'episode_rewards'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Episode'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Total Reward'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Training Progress'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><hr>
+<h2 id="troubleshooting">Troubleshooting </h2>
+<h3 id="common-issues">Common Issues </h3>
+<h4 id="1-agent-doesnt-reach-goal">1. Agent doesn't reach goal </h4>
+<p><strong>Symptoms</strong>: High negative rewards, no improvement</p>
+<p><strong>Solutions</strong>:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Increase exploration</span>
+uv run src/main.py <span class="token parameter variable">--epsilon</span> <span class="token number">0.2</span>
+
+<span class="token comment"># More training episodes</span>
+uv run src/main.py <span class="token parameter variable">--episodes</span> <span class="token number">1000</span>
+
+<span class="token comment"># Higher learning rate</span>
+uv run src/main.py <span class="token parameter variable">--alpha</span> <span class="token number">0.2</span>
+
+<span class="token comment"># Lower step penalty</span>
+uv run src/main.py --step-penalty <span class="token parameter variable">-0.1</span>
+</code></pre><h4 id="2-slow-convergence">2. Slow convergence </h4>
+<p><strong>Symptoms</strong>: Slow learning curve improvement</p>
+<p><strong>Solutions</strong>:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Increase learning rate</span>
+uv run src/main.py <span class="token parameter variable">--alpha</span> <span class="token number">0.2</span>
+
+<span class="token comment"># Adjust discount factor</span>
+uv run src/main.py <span class="token parameter variable">--gamma</span> <span class="token number">0.95</span>
+
+<span class="token comment"># For DQN: larger batch size</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --dqn-batch-size <span class="token number">128</span>
+</code></pre><h4 id="3-dqn-instability">3. DQN instability </h4>
+<p><strong>Symptoms</strong>: Wild fluctuations in rewards</p>
+<p><strong>Solutions</strong>:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Larger replay buffer</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --dqn-buffer-size <span class="token number">50000</span>
+
+<span class="token comment"># More frequent target updates</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --dqn-target-update <span class="token number">5</span>
+
+<span class="token comment"># Lower learning rate</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql <span class="token parameter variable">--alpha</span> <span class="token number">0.0001</span>
+</code></pre><h4 id="4-memory-issues-on-large-grids">4. Memory issues on large grids </h4>
+<p><strong>Symptoms</strong>: Out of memory errors</p>
+<p><strong>Solutions</strong>:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token comment"># Use DQN for large grids</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql <span class="token parameter variable">--rows</span> <span class="token number">20</span> <span class="token parameter variable">--cols</span> <span class="token number">20</span>
+
+<span class="token comment"># Reduce buffer size</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --dqn-buffer-size <span class="token number">5000</span>
+
+<span class="token comment"># Reduce network size</span>
+uv run src/main.py <span class="token parameter variable">--algorithm</span> dql --dqn-hidden <span class="token number">64</span> <span class="token number">64</span>
+</code></pre><hr>
+<h2 id="tips--best-practices">Tips &amp; Best Practices </h2>
+<h3 id="1-algorithm-selection">1. Algorithm Selection </h3>
+<ul>
+<li><strong>Small grids (&lt;7x7)</strong>: Use VI or PI for optimal solutions</li>
+<li><strong>Medium grids (7x10)</strong>: Q-Learning or SARSA(λ)</li>
+<li><strong>Large grids (&gt;10x10)</strong>: DQN</li>
+</ul>
+<h3 id="2-hyperparameter-tuning">2. Hyperparameter Tuning </h3>
+<ul>
+<li>Start with defaults</li>
+<li>Adjust learning rate (alpha) first</li>
+<li>Then tune exploration (epsilon)</li>
+<li>Finally adjust discount (gamma)</li>
+</ul>
+<h3 id="3-debugging">3. Debugging </h3>
+<ul>
+<li>Use <code>--verbose</code> to see step-by-step actions</li>
+<li>Use <code>--animate</code> to visualize behavior</li>
+<li>Check learning curves for convergence</li>
+<li>Compare with <code>--algorithm compare</code></li>
+</ul>
+<h3 id="4-performance-optimization">4. Performance Optimization </h3>
+<ul>
+<li>Reduce <code>--max-steps</code> for faster training</li>
+<li>Use <code>--no-viz</code> for batch experiments</li>
+<li>Save models to avoid retraining</li>
+</ul>
+<hr>
+<h2 id="glossary">Glossary </h2>
+<ul>
+<li><strong>Alpha (α)</strong>: Learning rate - how much to update Q-values</li>
+<li><strong>Gamma (γ)</strong>: Discount factor - how much to value future rewards</li>
+<li><strong>Epsilon (ε)</strong>: Exploration rate - probability of random action</li>
+<li><strong>Lambda (λ)</strong>: Eligibility trace decay in SARSA(λ)</li>
+<li><strong>Episode</strong>: One complete trajectory from start to goal</li>
+<li><strong>State</strong>: Agent's position in the grid</li>
+<li><strong>Action</strong>: Movement direction (up, right, down, left)</li>
+<li><strong>Reward</strong>: Numerical feedback from environment</li>
+<li><strong>Policy</strong>: Mapping from states to actions</li>
+<li><strong>Q-value</strong>: Expected future reward for state-action pair</li>
+<li><strong>Value function</strong>: Expected future reward for a state</li>
+</ul>
+<hr>
+<h2 id="further-reading">Further Reading </h2>
+<h3 id="reinforcement-learning-resources">Reinforcement Learning Resources </h3>
+<ul>
+<li>Sutton &amp; Barto: "Reinforcement Learning: An Introduction"</li>
+<li>David Silver's RL Course: <a href="https://www.davidsilver.uk/teaching/">https://www.davidsilver.uk/teaching/</a></li>
+<li>OpenAI Spinning Up: <a href="https://spinningup.openai.com/">https://spinningup.openai.com/</a></li>
+</ul>
+<h3 id="framework-extensions">Framework Extensions </h3>
+<p>Consider implementing:</p>
+<ul>
+<li>Stochastic transitions</li>
+<li>Continuous action spaces</li>
+<li>Multi-agent scenarios</li>
+<li>Hierarchical RL</li>
+<li>Transfer learning</li>
+</ul>
+<hr>
+<p><strong>Version</strong>: 1.0<br>
+<strong>Last Updated</strong>: 2024<br>
+<strong>License</strong>: MIT</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
