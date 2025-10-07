@@ -15,6 +15,9 @@ A comprehensive Python framework for learning and experimenting with reinforceme
 - **Customizable Environments**: Configurable grids, obstacles, rewards
 - **Comprehensive Logging**: Track and analyze training metrics
 
+![DQL Learning Animation](visualizations/dql_learning_process.gif)
+
+
 ##  Table of Contents
 
 - [Installation](#installation)
