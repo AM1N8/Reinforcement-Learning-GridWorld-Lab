@@ -33,7 +33,6 @@ A comprehensive Python framework for learning and experimenting with reinforceme
 - [Development](#development)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
-- [License](#license)
 
 ##  Installation
 
