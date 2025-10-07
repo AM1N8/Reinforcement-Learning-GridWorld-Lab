@@ -19,6 +19,7 @@ A comprehensive Python framework for learning and experimenting with reinforceme
   <img src="visualizations/ql_q_values.png" width="400" alt="Q-Learning Q-Values">
   <img src="visualizations/q-learning_trajectory.gif" width="400" alt="Q-Learning Trajectory">
   <img src="visualizations/dql_training_summary.png" width="400" alt="DQN Training Summary">
+  <img src="visualizations/vi_value_function.png" width="400" alt="vi value function">
 </p>
 
 ##  Table of Contents
