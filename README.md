@@ -33,6 +33,45 @@ python pacman.py -p ApproximateQAgent -a extractor=DeepExtractor -x 200 -n 210 -
 # Large challenging layout
 python pacman.py -p ApproximateQAgent -a extractor=ExpertExtractor -x 100 -n 110 -l openClassic
 ```
+```
+┌──(amine㉿DESKTOP)-[ DeepRL]-[~/Projects/INBOX/DeepRL/projet3]-[pacman]                                  
+└─$ python pacman.py -p ApproximateQAgent -a extractor=GhostBustersExtractor -x 500 -n 510 -l mediumClassic
+Beginning 500 episodes of Training
+Reinforcement Learning Status:
+        Completed 100 out of 500 training episodes
+        Average Rewards over all training: 954.31
+        Average Rewards for last 100 episodes: 954.31
+        Episode took 19.50 seconds
+Reinforcement Learning Status:
+        Completed 200 out of 500 training episodes
+        Average Rewards over all training: 1236.60
+        Average Rewards for last 100 episodes: 1518.88
+        Episode took 18.45 seconds
+Reinforcement Learning Status:
+        Completed 300 out of 500 training episodes
+        Average Rewards over all training: 1320.09
+        Average Rewards for last 100 episodes: 1487.08
+        Episode took 18.66 seconds
+Reinforcement Learning Status:
+        Completed 400 out of 500 training episodes
+        Average Rewards over all training: 1356.05
+        Average Rewards for last 100 episodes: 1463.92
+        Episode took 19.29 seconds
+Reinforcement Learning Status:
+        Completed 500 out of 500 training episodes
+        Average Rewards over all training: 1361.36
+        Average Rewards for last 100 episodes: 1382.61
+        Episode took 17.29 seconds
+Training Done (turning off epsilon and alpha)
+---------------------------------------------
+Pacman died! Score: -184
+Pacman emerges victorious! Score: 2064
+Pacman emerges victorious! Score: 1637
+Pacman emerges victorious! Score: 1860
+Pacman emerges victorious! Score: 1806
+Pacman emerges victorious! Score: 1928
+```
+
 
 ## 1. AdvancedExtractor – Comprehensive Game Understanding
 
