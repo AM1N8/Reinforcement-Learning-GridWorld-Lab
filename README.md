@@ -1,5 +1,7 @@
 # GridWorld Reinforcement Learning Framework
 
+- livrable 1 2 et 3 et pacman dans different branches 
+
 A comprehensive Python framework for learning and experimenting with reinforcement learning algorithms in a grid world environment.
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
