@@ -33,6 +33,7 @@ python pacman.py -p ApproximateQAgent -a extractor=DeepExtractor -x 200 -n 210 -
 # Large challenging layout
 python pacman.py -p ApproximateQAgent -a extractor=ExpertExtractor -x 100 -n 110 -l openClassic
 ```
+## Exemple : 500ep avec extractor = GhostBustersExtractor
 ```
 ┌──(amine㉿DESKTOP)-[ DeepRL]-[~/Projects/INBOX/DeepRL/projet3]-[pacman]                                  
 └─$ python pacman.py -p ApproximateQAgent -a extractor=GhostBustersExtractor -x 500 -n 510 -l mediumClassic
