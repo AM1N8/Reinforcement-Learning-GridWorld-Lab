@@ -1,4 +1,6 @@
-Feature Comparison
+# Pacman Feature Extractors
+
+## Feature Comparison
 
 | Feature Type       | SimpleExtractor | AdvancedExtractor | ExpertExtractor | DeepExtractor |
 |-------------------|----------------|-----------------|----------------|---------------|
@@ -12,10 +14,13 @@ Feature Comparison
 | Escape Routes      | ✗              | ✗               | ✓              | ✓             |
 | Interaction Terms  | ✗              | ✗               | ✗              | ✓             |
 
+These extractors significantly improve Pacman's performance on challenging layouts.
 
-These extractors should significantly improve Pacman's performance on challenging
+---
 
-```
+## Running the Agents
+
+```bash
 # Test AdvancedExtractor
 python pacman.py -p ApproximateQAgent -a extractor=AdvancedExtractor -x 50 -n 60 -l mediumGrid
 
@@ -29,34 +34,43 @@ python pacman.py -p ApproximateQAgent -a extractor=DeepExtractor -x 200 -n 210 -
 python pacman.py -p ApproximateQAgent -a extractor=ExpertExtractor -x 100 -n 110 -l openClassic
 ```
 
-### 1. AdvancedExtractor - Comprehensive Game Understanding
-Key Features:
+## 1. AdvancedExtractor – Comprehensive Game Understanding
 
-Food Features: Density analysis, local clustering
-Ghost Intelligence: Separates active vs scared ghosts, danger zones, exponential danger scoring
-Capsule Strategy: Strategic capsule pursuit when under pressure
-Tactical Awareness: Dead-end detection, mobility scoring, path safety lookahead
-Movement Optimization: Penalizes stopping, rewards momentum
+**Key Features:**
 
-Use Case: General improvement for medium-sized layouts
-### 2. ExpertExtractor - Advanced Game Theory
-Key Features:
+- **Food Features:** Density analysis and local clustering.
+- **Ghost Intelligence:** Differentiates active vs scared ghosts, identifies danger zones, applies exponential danger scoring.
+- **Capsule Strategy:** Pursues capsules strategically when under pressure.
+- **Tactical Awareness:** Detects dead-ends, evaluates mobility, and looks ahead for path safety.
+- **Movement Optimization:** Penalizes stopping and rewards smooth momentum.
 
-#### Game Phase Detection: Adapts strategy for early/mid/endgame
-Territory Control: Analyzes which food is actually reachable before ghosts
-Ghost Prediction: Predicts where ghosts will move (assumes they chase Pacman)
-Scared Ghost Hunting: Calculates value of pursuing scared ghosts with time constraints
-Food Clustering: Prefers dense food areas for efficiency
-Escape Route Analysis: Counts viable escape paths, detects traps
-Competition Metrics: Compares Pacman's distance to food vs ghost distances
+**Use Case:** Ideal for medium-sized layouts to improve general gameplay performance.
 
-#### Use Case: Large layouts and competitive scenarios
-### 3. DeepExtractor - Feature Engineering with Interactions
-Key Features:
+---
 
-Interaction Terms: Combines features (e.g., food-ghost-interaction)
-Risk-Reward Ratios: Balances danger against opportunity
-Polynomial Features: Non-linear relationships (squared distances)
-Composite Metrics: Complex derived features
+## 2. ExpertExtractor – Advanced Game Theory
 
-Use Case: Maximum learning capacity with sufficient training data
+**Key Features:**
+
+- **Game Phase Detection:** Adjusts strategy for early, mid, and endgame phases.
+- **Territory Control:** Analyzes which food is reachable given ghost positions.
+- **Ghost Prediction:** Predicts ghost movements assuming they chase Pacman.
+- **Scared Ghost Hunting:** Evaluates opportunities for pursuing scared ghosts efficiently.
+- **Food Clustering:** Prefers dense food areas for optimal collection.
+- **Escape Route Analysis:** Counts viable escape paths and detects potential traps.
+- **Competition Metrics:** Compares Pacman’s distance to food relative to ghosts.
+
+**Use Case:** Best suited for large layouts or competitive scenarios requiring advanced planning.
+
+---
+
+## 3. DeepExtractor – Feature Engineering with Interactions
+
+**Key Features:**
+
+- **Interaction Terms:** Combines multiple features (e.g., food-ghost interactions) for richer representations.
+- **Risk-Reward Ratios:** Balances danger against potential rewards.
+- **Polynomial Features:** Captures non-linear relationships such as squared distances.
+- **Composite Metrics:** Derives complex features from multiple sources for improved learning.
+
+**Use Case:** Maximizes learning capacity on complex layouts when sufficient training data is available.
