@@ -1,0 +1,28 @@
+# Environment configuration
+env:
+  size: 8
+  obstacles: 5
+  seed: 42
+
+# Algorithm selection
+algorithm: DQN
+
+# Training configuration
+train:
+  episodes: 2000
+  batch_size: 64
+  replay_size: 10000
+  lr: 0.001
+  gamma: 0.99
+  epsilon_start: 1.0
+  epsilon_end: 0.01
+  epsilon_decay: 0.998
+  target_update: 200
+  eval_interval: 100
+  save_interval: 500
+
+# Logging configuration
+logging:
+  log_dir: logs
+  save_dir: models
+  use_tensorboard: true
