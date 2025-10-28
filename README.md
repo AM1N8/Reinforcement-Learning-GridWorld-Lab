@@ -15,6 +15,7 @@ rl-playground/
 │   │   └── plotter.py
 │   ├── experiments/
 │   │   ├── train_dqn.py
+|   |   ├── train_sb3.py
 │   │   └── evaluate.py
 │   ├── __init__.py
 │   └── environment.py
