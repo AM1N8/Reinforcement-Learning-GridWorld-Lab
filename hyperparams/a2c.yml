@@ -1,0 +1,41 @@
+# A2C Hyperparameters for various environments
+# Compatible with rl_zoo3 format
+
+CartPole-v1:
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 5
+  gamma: 0.99
+  learning_rate: 0.0007
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  gae_lambda: 1.0
+  use_rms_prop: true
+  normalize_advantage: false
+
+LunarLander-v3:
+  n_timesteps: !!float 5e5
+  policy: 'MlpPolicy'
+  n_steps: 5
+  gamma: 0.99
+  learning_rate: 0.0007
+  ent_coef: 0.01
+  vf_coef: 0.25
+  max_grad_norm: 0.5
+  gae_lambda: 1.0
+  use_rms_prop: true
+  normalize_advantage: true
+
+GridWorld-v0:
+  n_timesteps: !!float 1e5
+  policy: 'MlpPolicy'
+  n_steps: 8
+  gamma: 0.99
+  learning_rate: 0.0007
+  ent_coef: 0.01
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  gae_lambda: 1.0
+  use_rms_prop: true
+  normalize_advantage: false

@@ -1,0 +1,58 @@
+[project]
+name = "rl-pipeline"
+version = "0.1.0"
+description = "Complete Reinforcement Learning Pipeline with stable-baselines3 and rl_zoo3"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "stable-baselines3[extra]>=2.3.0",
+    "rl-zoo3>=2.3.0",
+    "gymnasium>=0.29.1",
+    "gymnasium[box2d]>=0.29.1",
+    "loguru>=0.7.2",
+    "tensorboard>=2.15.0",
+    "pyyaml>=6.0.1",
+    "numpy>=1.24.0,<2.0.0",
+    "torch>=2.0.0",
+    "opencv-python>=4.8.0",
+    "matplotlib>=3.7.0",
+    "pandas>=2.0.0",
+    "tqdm>=4.65.0",
+    "optuna>=3.4.0",
+    "huggingface-sb3>=3.0",
+    "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py39', 'py310', 'py311']
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
