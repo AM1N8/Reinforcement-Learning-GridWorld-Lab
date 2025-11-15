@@ -37,11 +37,6 @@ env/
 .ipynb_checkpoints/
 *.ipynb
 
-# Project specific
-*.zip
-*.mp4
-*.avi
-
 # Temporary files
 *.log
 *.tmp
@@ -51,6 +46,5 @@ Thumbs.db
 # uv
 uv.lock
 
-# Environment variables
-.env.local
+
 
