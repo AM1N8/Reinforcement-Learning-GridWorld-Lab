@@ -1,0 +1,1 @@
+C:\Users\amine\AppData\Roaming\uv\python\cpython-3.11.13-windows-x86_64-none\python.exe -m rl_zoo3.train --algo ppo --env LunarLander-v3 --conf-file hyperparams/ppo.yml --tensorboard-log tensorboard/

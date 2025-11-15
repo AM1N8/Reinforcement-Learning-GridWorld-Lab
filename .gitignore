@@ -38,10 +38,6 @@ env/
 *.ipynb
 
 # Project specific
-logs/
-videos/
-models/
-tensorboard/
 *.zip
 *.mp4
 *.avi
