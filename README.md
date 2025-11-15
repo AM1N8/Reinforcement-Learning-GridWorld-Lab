@@ -1,6 +1,6 @@
 # GridWorld Reinforcement Learning Framework
 
-- livrable 1 2 et 3 et pacman dans different branches 
+### -> livrable 1 2 et 3 et pacman et RLZoo dans different branches 
 
 A comprehensive Python framework for learning and experimenting with reinforcement learning algorithms in a grid world environment.
 
